@@ -1,178 +1,381 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Alvares | Psicólogo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      color: #222;
-      background-color: #f8f8f5;
-    }
-
-    header {
-      background-color: #e6dfd3;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      color: #3e3e3e;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #3e3e3e;
-      font-weight: 600;
-    }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: white;
-      padding-left: 40px;
-      background-attachment: fixed;
-    }
-
-    .hero h2 {
-      font-size: 42px;
-      max-width: 700px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    .cta-button {
-      background-color: #a67c52;
-      color: white;
-      padding: 12px 28px;
-      font-size: 18px;
-      border: none;
-      margin-top: 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .section {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h3 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .services li {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-
-    .contact {
-      background-color: #ddd2c3;
-      text-align: center;
-      padding: 40px;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      text-decoration: none;
-      color: #3e3e3e;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      background-color: #f0e9e0;
-    }
-
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 28px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Alvares | Psicologia Crítica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1c1e1d;
+            color: #f5f1e7;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+        .gold-accent {
+            color: #d4af37;
+        }
+        .bg-coffee {
+            background-color: #2a1c13;
+        }
+        .hover-gold:hover {
+            color: #d4af37;
+            transition: all 0.3s ease;
+        }
+        .section-divider {
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .card:hover {
+            border-left-color: #d4af37;
+            transform: translateX(5px);
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased leading-relaxed">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5516988357603" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-[#128C7E] transition-all duration-300" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <header>
-    <h1>Lucas Alvares, Psicólogo</h1>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-80 fixed w-full z-20 backdrop-filter backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <span class="text-lg gold-accent font-bold">Lucas Alvares</span>
+                    <span class="ml-2 text-xs text-gray-400">CRP 09/19118</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-sm hover-gold">Início</a>
+                    <a href="#sobre" class="text-sm hover-gold">Sobre</a>
+                    <a href="#para-quem" class="text-sm hover-gold">Para Quem</a>
+                    <a href="#servicos" class="text-sm hover-gold">Serviços</a>
+                    <a href="#contato" class="text-sm hover-gold">Contato</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="hover-gold">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Psicoterapia para quem busca clareza, consciência e transformação.</h2>
-    <p>Especializado em saúde mental para jovens adultos. Atendimentos online e presenciais.</p>
-    <a class="cta-button" href="https://wa.me/5516988357603" target="_blank">Agende sua sessão</a>
-  </section>
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-3xl mx-auto px-6 py-20 text-center fade-in">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">A Psicologia como possibilidade de ruptura e transformação.</h1>
+            <p class="text-lg md:text-xl mb-12 text-gray-300">Um espaço de escuta profunda, transformação e pensamento crítico. Com Lucas Alvares, Psicólogo clínico, mestre em Psicologia e especialista em questões do nosso tempo.</p>
+            <a href="https://wa.me/5516988357603" class="bg-coffee hover:bg-opacity-90 text-beige px-6 py-3 rounded text-sm font-medium inline-flex items-center">
+                <i class="fab fa-whatsapp mr-2"></i> Marcar Sessão
+            </a>
+        </div>
+    </section>
 
-  <section class="section" id="sobre">
-    <h3>Sobre Lucas</h3>
-    <p>
-      Psicólogo formado pela UEMG, mestre pela UFG, com pós-graduação em Psicologia Social. Em constante formação (Neuropsicologia, Ciências Sociais e Sociologia Política), atua há mais de 3 anos com atendimento clínico, docência e pesquisa. Trabalha a partir de uma perspectiva histórico-cultural, crítica e acolhedora. 
-    </p>
-    <p>
-      Seu trabalho é voltado para jovens adultos com demandas como ansiedade, depressão, autoconhecimento, burnout e conflitos em relacionamentos. Sua prática é guiada por escuta atenta, ética e compromisso com a transformação subjetiva e social.
-    </p>
-  </section>
+    <!-- About Section -->
+    <section id="sobre" class="py-16 section-divider">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-start space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-1/3">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Lucas Alvares" class="rounded-lg w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-bold mb-6 gold-accent">Sobre Lucas</h2>
+                    
+                    <div class="space-y-3 mb-8 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-graduation-cap gold-accent mr-3 mt-1"></i>
+                            <span>Psicólogo pela UEMG • Mestre em Psicologia pela UFG</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-book gold-accent mr-3 mt-1"></i>
+                            <span>Pós-graduado em Psicologia Social</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-brain gold-accent mr-3 mt-1"></i>
+                            <span>Especializações em Neuropsicologia, Ciências Sociais e Sociologia Política</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6">
+                        "Minha prática clínica é fundamentada na Psicologia Histórico-Cultural, inspirada em Vigotski, Luria e Leontiev. Com uma perspectiva crítica marxista, compreendo o sofrimento psíquico não como fracasso individual, mas como reflexo das contradições sociais e históricas que nos atravessam. Atendo sujeitos — e não sintomas. Ofereço uma escuta comprometida, metodológica e transformadora."
+                    </p>
+                    
+                    <p class="gold-accent italic mb-8">
+                        "Se você busca um espaço onde a escuta é compromisso com sua realidade, podemos conversar."
+                    </p>
+                    
+                    <a href="https://wa.me/5516988357603" class="bg-coffee hover:bg-opacity-90 text-beige px-6 py-2 rounded text-sm inline-flex items-center">
+                        <i class="fab fa-whatsapp mr-2"></i> Conversar com Lucas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="section services" id="servicos">
-    <h3>Serviços</h3>
-    <ul>
-      <li><strong>Psicoterapia Individual:</strong> Foco em ansiedade, depressão, autoestima, autoconhecimento e questões existenciais.</li>
-      <li><strong>Psicoterapia de Casal:</strong> Melhora da comunicação e resolução de conflitos.</li>
-      <li><strong>Psicologia do Esporte:</strong> Reabilitação psicológica, motivação, superação de lesões e consciência corporal em práticas esportivas.</li>
-      <li><strong>Palestras e Grupos de Estudos:</strong> Encontros baseados na Psicologia Histórico-Cultural para aprofundamento e formação crítica.</li>
-    </ul>
-    <a class="cta-button" href="https://wa.me/5516988357603" target="_blank">Fale comigo no WhatsApp</a>
-  </section>
+    <!-- For Whom Section -->
+    <section id="para-quem" class="py-16 bg-black bg-opacity-30 section-divider">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-12 text-center gold-accent">Para Quem é o Atendimento</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Ansiedade</h3>
+                    <p class="text-gray-300 italic">"Mesmo em silêncio, minha mente está em guerra."</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Depressão</h3>
+                    <p class="text-gray-300 italic">"A vida perdeu o gosto. Eu me perdi junto."</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Burnout</h3>
+                    <p class="text-gray-300 italic">"Me esvaziei tentando dar conta de tudo."</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Baixa autoestima</h3>
+                    <p class="text-gray-300 italic">"Sempre desisto de mim quando mais preciso."</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Problemas em relacionamentos</h3>
+                    <p class="text-gray-300 italic">"Meus vínculos desmoronam onde mais me feriram."</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="card p-5 bg-[#1c1e1d] bg-opacity-70">
+                    <h3 class="text-lg font-semibold mb-2 gold-accent">Autoconhecimento</h3>
+                    <p class="text-gray-300 italic">"Quero entender quem sou além da dor, além da performance."</p>
+                </div>
+            </div>
+            
+            <p class="text-center mt-12 gold-accent italic mb-8">
+                "Se você se reconheceu em alguma dessas vivências, talvez esteja pronto para começar."
+            </p>
+            
+            <div class="text-center">
+                <a href="https://wa.me/5516988357603" class="bg-coffee hover:bg-opacity-90 text-beige px-6 py-2 rounded text-sm inline-flex items-center mx-auto">
+                    <i class="fas fa-hourglass-start mr-2"></i> Iniciar meu processo
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <section class="section contact" id="contato">
-    <h3>Contato</h3>
-    <p>CRP: 09/19118</p>
-    <p>E-mail: <a href="mailto:psilucasalavares@gmail.com">psilucasalavares@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/5516988357603" target="_blank">Clique aqui para conversar</a></p>
-    <p>Redes sociais:</p>
-    <p>
-      <a href="https://www.instagram.com/psi.lucas.alvares" target="_blank">Instagram</a> |
-      <a href="https://x.com/psilucasalvares" target="_blank">X (Twitter)</a> |
-      <a href="https://medium.com/@psilucasalvares" target="_blank">Medium</a> |
-      <a href="http://lattes.cnpq.br/0983274179347936" target="_blank">Currículo Lattes</a>
-    </p>
-  </section>
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 section-divider">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-12 text-center gold-accent">Serviços</h2>
+            
+            <div class="space-y-8">
+                <!-- Service 1 -->
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold gold-accent">Psicoterapia Individual</h3>
+                        <p class="text-xs text-gray-400">Online</p>
+                    </div>
+                    <div class="md:w-3/4 text-gray-300">
+                        <p>Atendimento sigiloso, crítico e personalizado. Acompanhamento contínuo de questões como ansiedade, depressão, conflitos existenciais e baixa autoestima.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold gold-accent">Psicoterapia de Casal</h3>
+                    </div>
+                    <div class="md:w-3/4 text-gray-300">
+                        <p>Mediação de conflitos conjugais, escuta afetiva dos dois lados e fortalecimento da comunicação afetiva.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold gold-accent">Psicologia do Esporte</h3>
+                    </div>
+                    <div class="md:w-3/4 text-gray-300">
+                        <p>Reabilitação psicológica de atletas em momentos de lesão, perda de rendimento ou desmotivação. Trabalha consciência corporal, foco e superação de bloqueios mentais.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="flex flex-col md:flex-row items-start">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <h3 class="text-lg font-semibold gold-accent">Cursos e Palestras</h3>
+                    </div>
+                    <div class="md:w-3/4 text-gray-300">
+                        <p>Grupos de estudo, formação crítica em Psicologia Histórico-Cultural e ações psicoeducativas em instituições e empresas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5516988357603" class="bg-coffee hover:bg-opacity-90 text-beige px-6 py-2 rounded text-sm inline-flex items-center mx-auto">
+                    <i class="fas fa-info-circle mr-2"></i> Conheça meu trabalho
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025 Lucas Alvares. Todos os direitos reservados.
-  </footer>
+    <!-- How It Works Section -->
+    <section class="py-16 bg-black bg-opacity-30 section-divider">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-8 gold-accent">Como Funciona</h2>
+            <p class="text-gray-300 mb-8">
+                A psicoterapia online oferece a mesma qualidade do atendimento presencial, com a comodidade de estar no conforto de seu espaço. As sessões têm duração de 50 minutos e podem ser agendadas diretamente via WhatsApp.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div>
+                    <div class="gold-accent text-2xl mb-2">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <p class="text-sm">Agendamento flexível</p>
+                </div>
+                <div>
+                    <div class="gold-accent text-2xl mb-2">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <p class="text-sm">Sessões online</p>
+                </div>
+                <div>
+                    <div class="gold-accent text-2xl mb-2">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <p class="text-sm">50 minutos por sessão</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="py-16 section-divider">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-12 text-center gold-accent">Depoimentos</h2>
+            
+            <div class="space-y-8">
+                <div class="bg-[#1c1e1d] p-6 rounded-lg">
+                    <p class="italic text-gray-300 mb-4">
+                        "Entender minha dor como algo histórico foi libertador. Lucas me ajudou a ver além do sintoma, compreendendo as raízes sociais do meu sofrimento."
+                    </p>
+                    <p class="text-sm gold-accent">Rafael, 32 anos</p>
+                </div>
+                
+                <div class="bg-[#1c1e1d] p-6 rounded-lg">
+                    <p class="italic text-gray-300 mb-4">
+                        "Fui ouvido como nunca antes. Voltei a fazer sentido pra mim mesmo. A abordagem crítica de Lucas transformou minha relação com o mundo e comigo."
+                    </p>
+                    <p class="text-sm gold-accent">André, 29 anos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contato" class="py-16 bg-black bg-opacity-30 section-divider">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-8 gold-accent">"A escuta que você busca não é comum. Mas seu processo também não precisa ser."</h2>
+            
+            <div class="mb-12">
+                <a href="https://wa.me/5516988357603" class="bg-coffee hover:bg-opacity-90 text-beige px-6 py-3 rounded text-sm inline-flex items-center mx-auto">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar agora via WhatsApp
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-md mx-auto mt-8 text-left">
+                <div>
+                    <h3 class="text-sm font-semibold gold-accent mb-2">Contato Direto</h3>
+                    <p class="text-sm text-gray-300">WhatsApp: +55 (16) 98835-7603</p>
+                    <p class="text-sm text-gray-300">E-mail: psilucasalavares@gmail.com</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-sm font-semibold gold-accent mb-2">Redes Sociais</h3>
+                    <p class="text-sm text-gray-300">Instagram: @psi.lucas.alvares</p>
+                    <p class="text-sm text-gray-300">Medium: medium.com/@psilucasalvares</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center">
+                <p class="text-sm text-gray-400 mb-2">Lucas Alvares – Psicólogo CRP 09/19118</p>
+                
+                <div class="flex justify-center space-x-4 mb-4">
+                    <a href="#" class="text-xs hover-gold">Instagram</a>
+                    <a href="#" class="text-xs hover-gold">Medium</a>
+                    <a href="#" class="text-xs hover-gold">Lattes</a>
+                    <a href="https://wa.me/5516988357603" class="text-xs hover-gold">WhatsApp</a>
+                    <a href="#" class="text-xs hover-gold">Twitter</a>
+                </div>
+                
+                <p class="text-xs text-gray-500 italic mb-2">"Psicologia não como produto, mas como reconstrução radical do ser."</p>
+                <p class="text-xs text-gray-600">Este site não substitui atendimento psicológico. Para emergências, procure o serviço de saúde de sua cidade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple fade-in animation as user scrolls
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
