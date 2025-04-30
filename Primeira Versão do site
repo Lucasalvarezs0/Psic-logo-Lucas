@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Alvares | Psicólogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      color: #222;
+      background-color: #f8f8f5;
+    }
+
+    header {
+      background-color: #e6dfd3;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #3e3e3e;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #3e3e3e;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      padding-left: 40px;
+      background-attachment: fixed;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      max-width: 700px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .cta-button {
+      background-color: #a67c52;
+      color: white;
+      padding: 12px 28px;
+      font-size: 18px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .contact {
+      background-color: #ddd2c3;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #3e3e3e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #f0e9e0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lucas Alvares, Psicólogo</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Psicoterapia para quem busca clareza, consciência e transformação.</h2>
+    <p>Especializado em saúde mental para jovens adultos. Atendimentos online e presenciais.</p>
+    <a class="cta-button" href="https://wa.me/5516988357603" target="_blank">Agende sua sessão</a>
+  </section>
+
+  <section class="section" id="sobre">
+    <h3>Sobre Lucas</h3>
+    <p>
+      Psicólogo formado pela UEMG, mestre pela UFG, com pós-graduação em Psicologia Social. Em constante formação (Neuropsicologia, Ciências Sociais e Sociologia Política), atua há mais de 3 anos com atendimento clínico, docência e pesquisa. Trabalha a partir de uma perspectiva histórico-cultural, crítica e acolhedora. 
+    </p>
+    <p>
+      Seu trabalho é voltado para jovens adultos com demandas como ansiedade, depressão, autoconhecimento, burnout e conflitos em relacionamentos. Sua prática é guiada por escuta atenta, ética e compromisso com a transformação subjetiva e social.
+    </p>
+  </section>
+
+  <section class="section services" id="servicos">
+    <h3>Serviços</h3>
+    <ul>
+      <li><strong>Psicoterapia Individual:</strong> Foco em ansiedade, depressão, autoestima, autoconhecimento e questões existenciais.</li>
+      <li><strong>Psicoterapia de Casal:</strong> Melhora da comunicação e resolução de conflitos.</li>
+      <li><strong>Psicologia do Esporte:</strong> Reabilitação psicológica, motivação, superação de lesões e consciência corporal em práticas esportivas.</li>
+      <li><strong>Palestras e Grupos de Estudos:</strong> Encontros baseados na Psicologia Histórico-Cultural para aprofundamento e formação crítica.</li>
+    </ul>
+    <a class="cta-button" href="https://wa.me/5516988357603" target="_blank">Fale comigo no WhatsApp</a>
+  </section>
+
+  <section class="section contact" id="contato">
+    <h3>Contato</h3>
+    <p>CRP: 09/19118</p>
+    <p>E-mail: <a href="mailto:psilucasalavares@gmail.com">psilucasalavares@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/5516988357603" target="_blank">Clique aqui para conversar</a></p>
+    <p>Redes sociais:</p>
+    <p>
+      <a href="https://www.instagram.com/psi.lucas.alvares" target="_blank">Instagram</a> |
+      <a href="https://x.com/psilucasalvares" target="_blank">X (Twitter)</a> |
+      <a href="https://medium.com/@psilucasalvares" target="_blank">Medium</a> |
+      <a href="http://lattes.cnpq.br/0983274179347936" target="_blank">Currículo Lattes</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Lucas Alvares. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
